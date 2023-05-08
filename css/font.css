@@ -1,0 +1,107 @@
+* {
+    font-family: 'Roboto';
+    font-style: normal;
+}
+.headline1 {
+    font-weight: 700;
+    font-size: 42px;
+    line-height: 56px;
+    color: #284D6D;
+}
+.headline2 {
+    font-weight: bold;
+    color: #284D6D;
+    font-size: 32px;
+    line-height: 42px;
+}
+
+.headline3 {
+    font-weight: bold;
+    color: #284D6D;
+    font-size: 21px;
+    line-height: 35px;
+}
+
+.headline4 {
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 26px;
+    color: #FE5F5F;
+}
+.text1 {
+    color: #284D6D;
+    font-size: 18px;
+    line-height: 30px;
+}
+
+.text2 {
+    font-size: 14px;
+    color: #565E6A;
+}
+
+.text3 {
+    font-size: 16px;
+    line-height: 24px;
+}
+
+.cardName {
+    font-size: 16px;
+    font-weight: bold;
+    color: #284D6D;
+}
+
+.cardPosition {
+    font-size: 16px;
+    color: #284D6D;
+}
+
+.list {
+    font-size: 16px;
+    color: #FE5F5F;
+}
+
+.textCenter {
+    text-align: center;
+}
+
+.footerText {
+    font-size: 16px;
+    color: #EFF0F7;
+}
+
+/*-----------------------*/
+@media (max-width: 376px ) {
+    .headline2 {
+        font-size: 20px;
+        line-height: 24px;
+    }
+
+    .headline3 {
+        font-size: 16px;
+        line-height: 22px;
+        text-align: center;
+    }
+
+    .text1 {
+        font-size: 15px;
+        line-height: 24px;
+        text-align: center;
+    }
+
+    .list {
+        font-size: 15px;
+    }
+    .text2, .cardName, .cardPosition {
+        text-align: left;
+    }
+
+    .footerText {
+        font-size: 14px;
+        color: #EFF0F7;
+    }
+
+    .headline1 {
+        font-size: 20px;
+        line-height: 24px;
+    }
+}
