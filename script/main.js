@@ -7,16 +7,42 @@ var intervalId = setInterval(function() {
     var contactForm = document.querySelector(".contactContainer");
     var stepImage1 = document.getElementById("stepImage1");
     var stepImage2 = document.getElementById("stepImage2");
+    var steps = document.querySelector(".steps");
+
+    var card1 = document.getElementById("card1");
+    var card2 = document.getElementById("card2");
+    var card3 = document.getElementById("card3");
+    var card4 = document.getElementById("card4");
+
+    var pageNav = document.getElementById("pageNav");
 
     var contactFormWidth = contactForm.offsetWidth - 80;
     stepImage1.style.backgroundSize = contactFormWidth + "px";
     stepImage2.style.backgroundSize = contactFormWidth + "px";
 
+    var stepsHeight = contactFormWidth/368;
+    stepsHeight *= 70;
+    steps.style.height = stepsHeight + "px";
+
     var containerwidth = container.offsetWidth - 130;
     var cardWidth = card.offsetWidth + 20;
-    if(containerwidth > 500) {
-        var cardNum = parseInt(containerwidth/cardWidth);
-        var width = cardNum * cardWidth;
+    var cardNum = parseInt(containerwidth/cardWidth);
+    var width = cardNum * cardWidth;
+    
+    if(cardNum <= 1) {
+        card2.style.display = "none";
+        card3.style.display = "none";
+        card4.style.display = "none";
+
+        pageNav.style.display = "block";
+    } else {
+        card2.style.display = "inline-block";
+        card3.style.display = "inline-block";
+        card4.style.display = "inline-block";
+
+        pageNav.style.display = "none";
+    }
+    if(cardNum >= 1) {
         cards.style.maxWidth = width + "px";
     }
   }, 50);

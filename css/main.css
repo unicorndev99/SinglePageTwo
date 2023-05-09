@@ -11,7 +11,7 @@ body {
 
 .container {
     max-width: 1440px;
-    min-width: 250px;
+    min-width: 300px;
     margin: 0 auto;
     height: 100%;
     position: relative;
@@ -24,7 +24,7 @@ body {
 .headerImage {
     position: absolute;
     background-image: url("../img/Header Desktop.png");
-    background-position: left;
+    background-position: right;
     width: 100%;
     height: 400px;
 }
@@ -135,7 +135,7 @@ body {
 
 
 .firstSection .content .column_1 .contactContainer .contactForm .step4 .col_1 .nameInput, .phoneInput {
-    width: 275px;   
+    width: 47%;   
     margin-left: 8px;
     margin-right: 8px; 
 }
@@ -146,9 +146,19 @@ body {
     margin-bottom: 24px;
 }
 
-.firstSection .content .column_1 .contactContainer .contactForm .step2 .col_1 .radio .checkmark {
-    width: 262px;
+.firstSection .content .column_1 .contactContainer .contactForm .step2 .col_1 .radio {
     margin: 0 6px;
+    width: 47%;
+}
+
+.firstSection .content .column_1 .contactContainer .contactForm .step2 .col_1 .radio .checkmark {
+    width: 100%;
+    margin: 0 6px;
+}
+
+.firstSection .content .column_1 .contactContainer .contactForm .step3 .radio {
+    margin: 0 6px;
+    width: 47%;
 }
 
 .firstSection .content .column_1 .contactContainer .contactForm .step3 .col_1 {
@@ -160,17 +170,16 @@ body {
 .firstSection .content .column_1 .contactContainer .contactForm .step3 .col_2 {
     display: flex;
     align-items: center;
-    margin-bottom: 24px;
 }
 
 
 .firstSection .content .column_1 .contactContainer .contactForm .step3 .col_2 .radio .checkmark {
-    width: 262px;
+    width: 100%;
     margin: 0 6px;
 }
 
 .firstSection .content .column_1 .contactContainer .contactForm .step3 .col_1 .radio .checkmark {
-    width: 262px;
+    width: 100%;
     margin: 0 6px;
 }
 
@@ -186,7 +195,8 @@ body {
     background-image: url("../img/radio1.png");
     background-repeat: no-repeat;
     background-position: center left 18px; 
-    height: 70px;
+    min-height: 70px;
+    font-weight: normal;
     font-size: 16px;
     line-height: 23px;
     color: #284D6D;
@@ -199,8 +209,15 @@ body {
     background-position: center left 18px;
 }
 
+.firstSection .content .column_1 .contactContainer .contactForm .radio input:hover ~ .checkmark {
+    border: 2px solid #FE5F5F;
+    background-image: url("../img/radio2.png");
+    background-repeat: no-repeat;
+    background-position: center left 18px;
+}
+
 .firstSection .content .column_1 .contactContainer .contactForm hr {
-    border: 1px solid #EFF0F7;
+    border: 2px solid #EFF0F7;
     transform: rotate(0.07deg);
     margin: 16px 0px;
 }
@@ -216,6 +233,7 @@ body {
 
 .firstSection .content .column_1 .contactContainer .contactForm a {
     position: relative;
+    font-weight: normal;
     font-size: 16px;
     line-height: 24px;
     color: #A1A1B2;
@@ -223,6 +241,7 @@ body {
 
 
 .firstSection .content .column_1 .contactContainer .contactForm .bottom button {
+    font-weight: bold;
     font-size: 16px;
     line-height: 24px;
     color: #FFFFFF;
@@ -238,38 +257,63 @@ body {
 
 .firstSection .content .column_1 .contactContainer .contactForm .stepContent .step1 input {
     background: #FFFFFF;
-    border: 1px solid #EFF0F7;
+    border: 2px solid #EFF0F7;
     box-shadow: 0px 2px 6px rgba(19, 18, 66, 0.07);
     border-radius: 100px;
     padding: 16px 45px 16px 24px;
     width: 100%;
+    font-weight: normal;
     font-size: 16px;
     line-height: 20px;
     background-image: url("../img/search\ icon.png");
     background-repeat: no-repeat;
     background-position: right 27px center;
     background-size: 17px 17px;
-    margin-bottom: 24px;
+    outline: none;
 }
+
+.firstSection .content .column_1 .contactContainer .contactForm .stepContent .step1 input:hover {
+    background: white;
+    border: 2px solid #FE5F5F;
+}
+
+.firstSection .content .column_1 .contactContainer .contactForm .stepContent .step1 input:focus {
+    background: white;
+    border: 2px solid #FE5F5F;
+}
+
 .firstSection .content .column_1 .contactContainer .contactForm .stepContent .step4, .step2, .step3 {
     display: none;
 }
 
 .firstSection .content .column_1 .contactContainer .contactForm .stepContent .step4 input {
+    font-weight: normal;
     font-size: 16px;
     line-height: 24px;
     color: #A1A1B2;
     padding: 17px 45px 17px 24px;
     background: #FFFFFF;
-    border: 1px solid #EFF0F7;
+    border: 2px solid #EFF0F7;
     box-shadow: 0px 2px 6px rgba(19, 18, 66, 0.07);
     border-radius: 46px;
     background-repeat: no-repeat;
     background-position: right 24px center;
     width: 100%;
+    outline: none;
+}
+
+.firstSection .content .column_1 .contactContainer .contactForm .stepContent .step4 input:hover {
+    background-color: white;
+    border: 2px solid #FE5F5F;
+}
+
+.firstSection .content .column_1 .contactContainer .contactForm .stepContent .step4 input:focus {
+    background-color: white;
+    border: 2px solid #FE5F5F;
 }
 
 .firstSection .content .column_1 .contactContainer .contactForm .stepContent .step4 p {
+    font-weight: bold;
     font-size: 16px;
     line-height: 23px;
     color: #284D6D;
@@ -472,10 +516,9 @@ footer .footerText {
     float: right;
 }
 /*--------------responsive--------------*/
-@media(max-width: 992px) {
+@media(max-width: 1200px) {
     .container {
         max-width: 991px;
-        min-width: 850px;
     }
     /*-----------------------------------------------------------*/
     .headerImage {
@@ -488,7 +531,7 @@ footer .footerText {
     }
     .firstSection .content .column_1 .space1 {
         display: block;
-        height: 130px;
+        height: 200px;
     }
 
     .firstSection .content .column_1 .contactContainer {
@@ -517,57 +560,43 @@ footer .footerText {
         display: none;
     }
 
-    .firstSection .content .column_1 .contactContainer .contactForm .step2 .col_1 .radio .checkmark {
-        width: 305px;
-        margin: 0 6px;
-    }
-    
-    .firstSection .content .column_1 .contactContainer .contactForm .step3 .col_1 .radio .checkmark {
-        width: 305px;
-        margin: 0 6px;
-    }
-
-    .firstSection .content .column_1 .contactContainer .contactForm .step3 .col_2 .radio .checkmark {
-        width: 305px;
-        margin: 0 6px;
-    }
-
-    .firstSection .content .column_1 .contactContainer .contactForm .step4 .col_1 .nameInput, .phoneInput {
-        width: 330px;   
-        margin-left: 8px;
-        margin-right: 8px; 
-    }
-
-    .firstSection .content .column_1 .contactContainer .contactForm .step4 .col_2 .emailInput {
-        margin-bottom: 24px;
-    }
-    .firstSection .content .column_1 .contactContainer .contactForm .step2 .col_2 .radio .checkmark {
-        margin-bottom: 24px;
-    }
-
     .secondSection .content {
-        width: 705px;
+        width: 100%;
         display: block;
-        padding: 65px 20px;
     }
 
     .secondSection .content .description {
-        width: 705px;
-        max-width: 705px;
+        max-width: 712px;
         text-align: center;
         padding: 0px;
+        margin: 0 auto;
     }
 
     .secondSection .content .diagram {
-        width: 705px;
-        max-width: 705px;
+        max-width: 712px;
+        margin: 0 auto;
     }
 }
+@media (max-width: 630px) {
 
-@media (max-width: 376px ) {
+    .firstSection .logo {
+        padding-left: 35px;
+    }
+    .firstSection {
+        padding: 0px;
+    }
+
+    .firstSection .content .column_1 .contactContainer .mark {
+        top: -70px;
+        right: 25px;
+    }
+}
+@media (max-width: 500px ) {
+    .headerImage {
+        background-position: right;
+    }
     .container {
         max-width: 375px;
-        min-width: 375px;
     }
 
     .headerImage {
@@ -636,15 +665,18 @@ footer .footerText {
     .firstSection .content .column_1 .contactContainer .contactForm .bottom button {
         padding: 9px 24px;
         float: none;
-        margin: 12px 85px 8px 85px;
+        margin: 0 auto;
+        position: relative;
+        display: block;
     }
 
     .firstSection .content .column_1 .contactContainer .contactForm a {
         position: relative;
+        font-weight: normal;
         font-size: 11px;
         line-height: 24px;
         color: #A1A1B2;
-        margin: 0px 45px;
+        margin: 0px auto;
     }
 
     .firstSection .content .column_1 .contactContainer .contactForm .bottom img {
@@ -655,39 +687,7 @@ footer .footerText {
         display: block;
         margin: 0px;
     }
-
-    .firstSection .content .column_1 .contactContainer .contactForm .step2 .col_1 .radio .checkmark {
-        width: 300px;
-        margin: 0 auto;
-        margin-bottom: 12px;
-    }
-
-    .firstSection .content .column_1 .contactContainer .contactForm .step2 .col_2 .radio .checkmark {
-        width: 300px;
-        margin: 0 auto;
-        margin-bottom: 12px;
-    }
-
-    .firstSection .content .column_1 .contactContainer .contactForm .step3 .col_1 .radio .checkmark {
-        width: 150px;
-    }
-
-    .firstSection .content .column_1 .contactContainer .contactForm .step3 .col_2 .radio .checkmark {
-        width: 150px;
-    }
     
-    .firstSection .content .column_1 .contactContainer .contactForm .step4 .col_1 .nameInput, .phoneInput {
-        width: 300px;   
-        margin: 0px auto;
-        margin-bottom: 12px;
-    }
-
-    .firstSection .content .column_1 .contactContainer .contactForm .step4 .col_2 .emailInput {
-        width: 300px; 
-        margin: 0px auto;
-        margin-bottom: 12px;
-    }
-
     .fourthSection {
         padding: 24px 0px;
     }
@@ -710,7 +710,24 @@ footer .footerText {
         margin: 0px;
         padding: 32px 40px;
     }
+    
+    .firstSection .content .column_1 .contactContainer .contactForm .step4 .col_1 .nameInput, .phoneInput {
+        width: 100%;   
+        margin: 0px;
+    }
 
+    .firstSection .content .column_1 .contactContainer .contactForm .step4 .col_1 .nameInput {
+        margin-bottom: 12px;
+    }
+
+    .firstSection .content .column_1 .contactContainer .contactForm .step2 .col_1 {
+        width: 95%;   
+        margin-left: 0px;
+    }
+
+    .firstSection .content .column_1 .contactContainer .contactForm .bottom {
+        margin-top: 24px;
+    }
     .thirdSection .title {
         margin-bottom: 16px;
     }
@@ -749,7 +766,13 @@ footer .footerText {
         height: 49px;
         font-size: 15px;
         line-height: 24px;
-    }    
+    }  
+    
+    .firstSection .content .column_1 .contactContainer .contactForm .step3 .radio {
+        margin: 0 6px;
+        width: 45%;
+    }
+      
 
     #stepImage1 {
         background-image: url("../img/mobile\ Step1.png");
@@ -761,22 +784,30 @@ footer .footerText {
     }
 
     .secondSection .content {
-        width: 305px;
-        display: block;
-        padding: 65px 10px;
+        width: 100%;
+        padding: 90px 20px 30px 20px;
     }
 
     .secondSection .content .description {
-        width: 305px;
         max-width: 305px;
         text-align: center;
-        padding-right: 0px;
+        padding: 0px;
+        margin: 0 auto;
+    }
+
+    .secondSection .content .text1 {
+        padding-top: 15px;
     }
 
     .secondSection .content .diagram {
-        width: 305px;
         max-width: 305px;
-        padding: 0px;
-        margin: 0px;
+        margin: 0 auto;
+    }
+
+    .firstSection .content .column_1 .contactContainer .contactForm .radio .checkmark {
+        padding: 12px 54px;
+        font-size: 13px;
+        line-height: 23px;
+        min-height: 49px;
     }
 }
