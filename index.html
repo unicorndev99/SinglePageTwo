@@ -5,7 +5,9 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Landing Page</title>
         <link rel="stylesheet" href="css/main.css">
-        <link rel="stylesheet" href="css/font.css">
+        <link rel="stylesheet" href="css/steps.css">
+        <link rel="stylesheet" href="css/contactForm.css">
+        <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
         <script src="script/scrollImage.js"></script>
         <script src="script/main.js"></script>
     </head>
@@ -14,28 +16,76 @@
             <div class="headerImage"></div>
             <section class="firstSection">
                 <div class="logo">
-                    <img src="img/Logo Sponsor.png">
+                    <img class="logo_Image" src="img/Logo Sponsor.svg">
                 </div>
-                <div class="content">
+                <div class="firstSectionContent">
                     <div class="column_1">
                         <div class="space1"></div>
                         <div class="contactContainer">
                             <div class="contactForm">
-                                <h2 class="headline2 textCenter">Trouver la résidence seniors qui vous ressemble !</h2>
-                                <div class="steps">
-                                    <div id="stepImage1"></div>
-                                    <div id="stepImage2"></div>
-                                    <div class="buttons">
-                                        <div onclick="movePreviousStep(1)"></div>
-                                        <div onclick="movePreviousStep(2)"></div>
-                                        <div onclick="movePreviousStep(3)"></div>
-                                        <div onclick="movePreviousStep(4)"></div>    
+                                <h2 class="ContactTitle">Trouver la résidence seniors qui vous ressemble !</h2>
+                                <div class="stepButtons">
+                                    <div class="stepButton1">
+                                        <div class="stepButtonContent">
+                                            <div class="stepButtonMain">
+                                                <div  class="stepButtonTitle">Localisation</div>
+                                                <div class="stepButtonMainContent" onclick="movePreviousStep(1)">
+                                                    <div  class="stepButtonCircle stepMovie"></div>
+                                                    <span  class="stepValue">1</span>
+                                                </div>
+                                            </div>
+                                            <div class="nextline">
+                                                <div  class="whiteline"></div>
+                                                <div  class="redline stepMovie"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="stepButton2">
+                                        <div class="stepButtonContent">
+                                            <div class="stepButtonMain">
+                                                <div  class="stepButtonTitle">Délai</div>
+                                                <div class="stepButtonMainContent" onclick="movePreviousStep(2)">
+                                                    <div  class="stepButtonCircle stepMovie"></div>
+                                                    <span  class="stepValue">2</span>
+                                                </div>
+                                            </div>
+                                            <div class="nextline">
+                                                <div  class="whiteline"></div>
+                                                <div  class="redline stepMovie"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="stepButton3">
+                                        <div class="stepButtonContent">
+                                            <div class="stepButtonMain">
+                                                <div  class="stepButtonTitle">Appartements</div>
+                                                <div class="stepButtonMainContent" onclick="movePreviousStep(3)">
+                                                    <div  class="stepButtonCircle stepMovie"></div>
+                                                    <span  class="stepValue">3</span>
+                                                </div>
+                                            </div>
+                                            <div class="nextline">
+                                                <div  class="whiteline"></div>
+                                                <div  class="redline stepMovie"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="stepButton4">
+                                        <div class="stepButtonContent">
+                                            <div class="stepButtonMain">
+                                                <div  class="stepButtonTitle">Coordonnées</div>
+                                                <div class="stepButtonMainContent">
+                                                    <div  class="stepButtonCircle stepMovie"></div>
+                                                    <span  class="stepValue">4</span>
+                                                </div>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
-                                <hr/>
+                                <hr class="horizontalLine"/>
                                 <div class="stepContent">
                                     <div class="step1" id="step1">
-                                        <div class="title headline3 textCenter">
+                                        <div class="stepContentTitle">
                                             <p>Où recherchez-vous votre résidence sénior?</p>
                                         </div>
                                         <div class="content">
@@ -43,16 +93,16 @@
                                         </div>
                                     </div>
                                     <div class="step2" id="step2">
-                                        <div class="title headline3 textCenter">
+                                        <div class="stepContentTitle">
                                             <p>Quand souhaitez vous intégrer la résidence?</p>
                                         </div>
                                         <div class="content">
                                             <div class="col_1">
-                                                <label class="radio">
+                                                <label class="radio radio1">
                                                     <input type="radio" name="radio1">
                                                     <div class="checkmark"><p>Le plus tôt possible</p></div>
                                                 </label>
-                                                <label class="radio">
+                                                <label class="radio radio2">
                                                     <input type="radio" name="radio1">
                                                     <div class="checkmark"><p>Entre 1 et 3 mois</p></div>
                                                 </label>    
@@ -66,50 +116,50 @@
                                         </div>
                                     </div>
                                     <div class="step3" id="step3">
-                                        <div class="title headline3 textCenter">
+                                        <div class="stepContentTitle">
                                             <p>Quel type d'appartement recherchez vous?</p>
                                         </div>
                                         <div class="content">
                                             <div class="col_1">
-                                                <label class="radio">
+                                                <label class="radio radio1">
                                                     <input type="radio" name="radio3">
                                                     <div class="checkmark"><p>T1</p></div>
                                                 </label>
-                                                <label class="radio">
+                                                <label class="radio radio2">
                                                     <input type="radio" name="radio3">
                                                     <div class="checkmark"><p>T2</p></div>
                                                 </label>    
                                             </div>
                                             <div class="col_2">
-                                                <label class="radio">
+                                                <label class="radio radio1">
                                                     <input type="radio" name="radio3">
                                                     <div class="checkmark"><p>T3</p></div>
                                                 </label>
-                                                <label class="radio">
+                                                <label class="radio radio2">
                                                     <input type="radio" name="radio3">
                                                     <div class="checkmark"><p>Autre</p></div>
-                                                </label>                                                    
+                                                </label>    
                                             </div>
                                         </div>
                                     </div>
                                     <div class="step4" id="step4">
-                                        <div class="title headline3 textCenter">
+                                        <div class="stepContentTitle">
                                             <p>Information de contact</p>
                                         </div>
                                         <div class="content">
                                             <div class="col_1">
                                                <div class="nameInput">
-                                                    <p>Nom, prénom</p>
+                                                    <p class="smalltitle">Nom, prénom</p>
                                                     <input placeholder="John Carter">
                                                </div> 
                                                <div class="phoneInput">
-                                                    <p>Téléphone</p>
+                                                    <p class="smalltitle">Téléphone</p>
                                                     <input placeholder="+33 6 558 999 15">
                                                </div>
                                             </div>
                                             <div class="col_2">
                                                 <div class="emailInput">
-                                                    <p>Email</p>
+                                                    <p class="smalltitle">Email</p>
                                                     <input placeholder="Email address">
                                                 </div>
                                             </div>
@@ -117,154 +167,154 @@
                                     </div>
                                 </div> 
                                 <div class="bottom">
-                                    <button onclick="nextStep()">Etape suivante</button>
-                                    <a><p><img src="img/key.png">   Protection des données & Ment0ions légales</p></a>
+                                    <button class="submitButton" onclick="nextStep()">Etape suivante</button>
+                                    <a class="protectLink"><p><img src="img/key.svg">   Protection des données & Ment0ions légales</p></a>
                                 </div>   
                             </div>
-                            <img class="mark" src="img/mark.png">    
+                            <img class="mark" src="img/mark.svg">    
                         </div>    
                     </div>
                     <div class="column_2">
                         <div class="space2"></div>
                         <div class="description">
-                            <h3 class="headline3">Retraite Plus vous aide à comparer les établissements sans vous déplacer et bénéficier de notre expertise sur plus de 1.000 résidences seniors partout en France.</h3>
-                            <ul class="list">
-                                <li>Un Service gratuit et sans engagement</li>
-                                <li>Une selection des meilleurs établissements</li>
-                                <li>L’accompagnement par nos conseillers experts 7/7j</li>
-                                <li>Une aide à l’élaboration de votre budget</li>
-                            </ul>
+                            <div class="content">
+                                <h3 class="descriptionTitle">Retraite Plus vous aide à comparer les établissements sans vous déplacer et bénéficier de notre expertise sur plus de 1.000 résidences seniors partout en France.</h3>
+                                <ul class="list">
+                                    <li>Un Service gratuit et sans engagement</li>
+                                    <li>Une selection des meilleurs établissements</li>
+                                    <li>L’accompagnement par nos conseillers experts 7/7j</li>
+                                    <li>Une aide à l’élaboration de votre budget</li>
+                                </ul>    
+                            </div>
                         </div>    
                     </div>
                 </div>
             </section>
             <section class="secondSection">
-                <div class="content">
-                    <div class="description">
-                        <h1 class="headline1">Trouver une résidence seniors en toute confiance</h1>
-                        <p class="text1">Retraite Plus est un organisme national qui aide et conseille gratuitement les seniors dans leurs recherches de résidences adaptées.
-                            <br>A chaque étape de votre recherche, nos conseillers se tiennent à vos côtés :</p>
+                <div class="secondSectionContent">
+                    <div class="column_1">
+                        <div class="content">
+                            <h1 class="contentTitle">Trouver une résidence seniors en toute confiance</h1>
+                            <p class="contentText">Retraite Plus est un organisme national qui aide et conseille gratuitement les seniors dans leurs recherches de résidences adaptées.
+                                <br>A chaque étape de votre recherche, nos conseillers se tiennent à vos côtés :</p>
+                        </div>
                     </div>
-                    <div class="diagram">
-                        <table>
-                            <tr>
-                                <td><img src="img/Content1.png"></td>
-                                <td>
-                                    <h4 class="headline4">Nous définissons ensemble vos besoins</h4>
-                                    <p class="text3">et précisons vos critères avec vous : type de structure, localisation, budget, disponibilité</p>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td><img src="img/line.png"></td>
-                                <td></td>
-                            </tr>
-                            <tr>
-                                <td><img src="img/Content2.png"></td>
-                                <td>
-                                    <h4 class="headline4">Nous sélectionnons les établissements</h4>
-                                    <p class="text3">et nous assurons que les structures proposées sont sûres, confortables et adaptées aux besoins des personnes âgées</p>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td><img src="img/line.png"></td>
-                                <td></td>
-                            </tr>
-                            <tr>
-                                <td><img src="img/Content3.png"></td>
-                                <td>
-                                    <h4 class="headline4">Nous organisons les visites</h4>
-                                    <p class="text3">et vous accompagnons dans toutes les démarches d’admission et de dossier de financement</p>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td><img src="img/line.png"></td>
-                                <td></td>
-                            </tr>
-                            <tr>
-                                <td><img src="img/Content4.png"></td>
-                                <td>
-                                    <h4 class="headline4">Nous restons à vos côtés</h4>
-                                    <p class="text3">pour nous assurer de la qualité de la prise en charge délivrée par l’établissement.</p>
-                                </td>
-                            </tr>
-                        </table>
-                    </div>    
+                    <div class="column_2">
+                        <div class="content">
+                            <div class="diagramContent">
+                                <div class="col_1" >
+                                    <img src="img/content1.svg">
+                                </div>
+                                <div class="col_2">
+                                    <h1 class="diagramTitle">Nous définissons ensemble vos besoins</h1>
+                                    <p class="diagramText">et précisons vos critères avec vous : type de structure, localisation, budget, disponibilité</p>
+                                </div>
+                            </div>
+                            <div class="diagramContent">
+                                <div class="col_1">
+                                    <img src="img/content2.svg">
+                                </div>
+                                <div class="col_2">
+                                    <h1 class="diagramTitle">Nous sélectionnons les établissements</h1>
+                                    <p class="diagramText">et nous assurons que les structures proposées sont sûres, confortables et adaptées aux besoins des personnes âgées</p>
+                                </div>
+                            </div>
+                            <div class="diagramContent">
+                                <div class="col_1">
+                                    <img src="img/content3.svg">
+                                </div>
+                                <div class="col_2">
+                                    <h1 class="diagramTitle">Nous organisons les visites</h1>
+                                    <p class="diagramText">et vous accompagnons dans toutes les démarches d’admission et de dossier de financement</p>
+                                </div>
+                            </div>
+                            <div class="diagramContent" id="diagramContent4">
+                                <div class="col_1">
+                                    <img src="img/content4.svg">
+                                </div>
+                                <div class="col_2">
+                                    <h1 class="diagramTitle">Nous restons à vos côtés</h1>
+                                    <p class="diagramText">pour nous assurer de la qualité de la prise en charge délivrée par l’établissement.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-            </section>
+            </section>    
             <section class="thirdSection">
                 <div class="title">
-                    <h2 class="headline2 textCenter">Ce que les familles disent de nous</h2>
-                    <p class="text1 textCenter">Retraite Plus est noté <b>4.7/5</b> sur la base de <b>3 626 avis</b> sur <img src="img/Single Star.png"></p>
+                    <h2 class="bigTitle">Ce que les familles disent de nous</h2>
+                    <p class="smallTitle">Retraite Plus est noté <b>4.7/5</b> sur la base de <b>3 626 avis</b> sur <img src="img/Single Star.svg"></p>
                 </div>
                 <div class="cards" id="cards">
-                    <div class="card margin card1" id="card1">
+                    <div class="card" id="card1">
                         <div class="content">
-                            <img src="img/stars.png">
-                            <p class="text2">J'ai envoyé un message un dimanche et une personne m'a contacté....le jour même. Ma demande a été étudiée immédiatement et j'ai trouvé le bon endroit grâce à cette personne. Merci !</p>
+                            <img src="img/stars.svg">
+                            <p class="cardText">J'ai envoyé un message un dimanche et une personne m'a contacté....le jour même. Ma demande a été étudiée immédiatement et j'ai trouvé le bon endroit grâce à cette personne. Merci !</p>
                             <div class="info">
                                 <p class="cardName">Customer Name</p>
                                 <p class="cardPosition">Position, Company name</p>
                             </div>    
                         </div>
                     </div>
-                    <div class="card margin card2" id="card2">
+                    <div class="card" id="card2">
                         <div class="content">
-                            <img src="img/stars.png">
-                            <p class="text2">J'ai envoyé un message un dimanche et une personne m'a contacté....le jour même. Ma demande a été étudiée immédiatement et j'ai trouvé le bon endroit grâce à cette personne. Merci !</p>
+                            <img src="img/stars.svg">
+                            <p class="cardText">J'ai envoyé un message un dimanche et une personne m'a contacté....le jour même. Ma demande a été étudiée immédiatement et j'ai trouvé le bon endroit grâce à cette personne. Merci !</p>
                             <div class="info">
                                 <p class="cardName">Customer Name</p>
                                 <p class="cardPosition">Position, Company name</p>
                             </div>    
                         </div>
                     </div>
-                    <div class="card margin card3" id="card3">
+                    <div class="card" id="card3">
                         <div class="content">
-                            <img src="img/stars.png">
-                            <p class="text2">J'ai envoyé un message un dimanche et une personne m'a contacté....le jour même. Ma demande a été étudiée immédiatement et j'ai trouvé le bon endroit grâce à cette personne. Merci !</p>
+                            <img src="img/stars.svg">
+                            <p class="cardText">J'ai envoyé un message un dimanche et une personne m'a contacté....le jour même. Ma demande a été étudiée immédiatement et j'ai trouvé le bon endroit grâce à cette personne. Merci !</p>
                             <div class="info">
                                 <p class="cardName">Customer Name</p>
                                 <p class="cardPosition">Position, Company name</p>
                             </div>    
                         </div>
                     </div>
-                    <div class="card card4" id="card4">
+                    <div class="card" id="card4">
                         <div class="content">
-                            <img src="img/stars.png">
-                            <p class="text2">J'ai envoyé un message un dimanche et une personne m'a contacté....le jour même. Ma demande a été étudiée immédiatement et j'ai trouvé le bon endroit grâce à cette personne. Merci !</p>
+                            <img src="img/stars.svg">
+                            <p class="cardText">J'ai envoyé un message un dimanche et une personne m'a contacté....le jour même. Ma demande a été étudiée immédiatement et j'ai trouvé le bon endroit grâce à cette personne. Merci !</p>
                             <div class="info">
                                 <p class="cardName">Customer Name</p>
                                 <p class="cardPosition">Position, Company name</p>
                             </div>    
                         </div>
                     </div>
-                    <div class="pageNav" id="pageNav">
-                        <label class="pageRadio">
-                            <input type="radio" checked="checked" name="radio2">
-                            <span class="checkmark"></span>
-                        </label>
-                        <label class="pageRadio">
-                            <input type="radio" checked="checked" name="radio2">
-                            <span class="checkmark"></span>
-                        </label>
-                        <label class="pageRadio">
-                            <input type="radio" checked="checked" name="radio2">
-                            <span class="checkmark"></span>
-                        </label>
-                        <label class="pageRadio">
-                            <input type="radio" checked="checked" name="radio2">
-                            <span class="checkmark"></span>
-                        </label>
-                    </div>
+                </div>
+                <div class="pageNav" id="pageNav">
+                    <label class="pageRadio">
+                        <input class="pageNavRadio" type="radio" checked="checked" name="radio2">
+                        <span class="checkmark" id="checkmark1"></span>
+                    </label>
+                    <label class="pageRadio">
+                        <input class="pageNavRadio" type="radio" name="radio2">
+                        <span class="checkmark" id="checkmark1"></span>
+                    </label>
+                    <label class="pageRadio">
+                        <input class="pageNavRadio" type="radio" name="radio2">
+                        <span class="checkmark" id="checkmark1"></span>
+                    </label>
+                    <label class="pageRadio">
+                        <input class="pageNavRadio" type="radio" name="radio2">
+                        <span class="checkmark" id="checkmark1"></span>
+                    </label>
                 </div>
             </section>
             <section class="fourthSection">
-                <h2 class="headline2 textCenter">Ils nous font confiance</h2>
+                <h2 class="title">Ils nous font confiance</h2>
                 <div id="scrollImage"></div>
             </section>
             <footer>
                 <table>
                     <tr>
-                        <td><img src="img/footer logo.png"></td>
+                        <td><img src="img/footer logo.svg"></td>
                         <td><p class="footerText">© Tous droits réservés Retraite Plus 2023</p></td>
                     </tr>
                 </table>

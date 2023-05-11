@@ -1,0 +1,574 @@
+.contactContainer {
+    position: relative; 
+
+    max-width: 637px;
+    
+    height: 694px;
+    
+    margin-left: 30px;
+    
+    float: right;
+    
+}
+
+@font-face {
+    font-family: myFont;
+    src: url("../Font/Roboto-Regular.ttf");
+}
+
+.contactContainer .contactForm {
+    position: relative;
+
+    width: 100%;
+    height: 100%;
+    
+    background-color: white;
+    box-shadow: 0px 10px 55px rgba(36, 74, 170, 0.15);
+    border-radius: 36px;
+    
+    padding: 60px 42px;
+    
+    display: flex;
+    flex-direction: column;
+}
+
+.contactContainer .contactForm .ContactTitle {
+    position: relative;
+
+    font-family: myFont;
+    font-style: normal;
+
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 42px;
+
+    text-align: center;
+
+    color: #284D6D;
+
+    width: 100%;
+
+    margin-bottom: 16px;
+}
+
+.contactContainer .contactForm .stepButtons {
+    position: relative;
+    margin: 0 auto;
+    margin-bottom: 16px;
+}
+
+.contactContainer .contactForm .horizontalLine {
+    position: relative;
+
+    border: 1px solid #EFF0F7;
+    transform: rotate(0.07deg);
+
+    margin-bottom: 16px;
+
+    width: 100%;
+}
+
+.contactContainer .contactForm .stepContent {
+    position: relative;
+
+    flex: 1;
+
+    width: 100%;
+    margin-bottom: 24px;
+}
+
+.contactContainer .contactForm .stepContent .stepContentTitle {
+    position: relative;
+
+    font-family: myFont;
+    font-style: normal;
+    
+    font-weight: 700;
+    font-size: 21px;
+    line-height: 35px;
+
+    text-align: center;
+
+    color: #284D6D;
+
+    margin-top: 16px;
+    margin-bottom: 24px;
+}
+
+.contactContainer .contactForm .bottom {
+    position: relative;
+}
+
+.contactContainer .contactForm .protectLink {
+    position: absolute;
+
+    bottom: 0px;
+    left: 0px;
+
+    
+    font-family: myFont;
+    font-style: normal;
+
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    
+    color: #A1A1B2;
+    
+    text-align: center;
+}
+
+.contactContainer .contactForm .stepContent .step4, .step2, .step3 {
+    display: none;
+}
+
+/*-----------------------------------Button------------------------------------------*/
+.contactContainer .contactForm .bottom .submitButton {
+    font-family: myFont;
+    font-style: normal;
+
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 24px;
+
+    color: #FFFFFF;
+    
+    background: #FE5F5F;
+    border: none;
+    border-radius: 100px;
+    
+    padding: 16px 24px;
+    
+    float: right;
+
+    cursor: pointer;
+}
+
+.contactContainer .contactForm .bottom .submitButton:hover {
+    background-color: rgb(255, 175, 175);
+    cursor: pointer;
+}
+/*----------------------------step1 Input------------------------------*/
+.contactContainer .contactForm .stepContent .step1 input {
+
+    background: #FFFFFF;
+    
+    border: 2px solid #EFF0F7;
+    box-shadow: 0px 2px 6px rgba(19, 18, 66, 0.07);
+    border-radius: 100px;
+    
+    padding: 16px 45px 16px 24px;
+
+    width: 100%;
+    height: 65px;
+    
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+    
+    color: #284D6D;
+    
+    background-image: url("../img/search\ icon.svg");
+    background-repeat: no-repeat;
+    background-position: right 23.5px center;
+    
+    background-size: 17px 17px;
+    
+    outline: none;
+}
+
+.contactContainer .contactForm .stepContent .step1 input:focus {
+    border: 2px solid #FE5F5F;
+    background-color: white;
+}
+
+.contactContainer .contactForm .stepContent .step1 input:hover {
+    border: 2px solid #FE5F5F;
+    background-color: white;
+}
+
+/*----------------------------radio Button-----------------------------*/
+.contactContainer .contactForm .radio {
+    cursor: pointer;
+    position: relative;
+
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.contactContainer .contactForm .radio input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+}
+
+.contactContainer .contactForm .radio .checkmark {
+    background: #FFFFFF;
+    box-shadow: 0px 2px 11px rgba(69, 65, 164, 0.06), 0px 4px 10px rgba(31, 37, 89, 0.07);
+    border-radius: 16px;
+
+    padding: 24px 54px;
+    
+    background-image: url("../img/radio1.svg");
+    background-repeat: no-repeat;
+    background-position: center left 18px; 
+    background-size: 24px;
+
+    font-family: myFont;
+    font-style: normal;
+    
+    min-height: 70px;
+
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 23px;
+    
+    color: #284D6D;
+    
+    border: 2px solid #EFF0F7;
+}
+
+.contactContainer .contactForm .radio input:checked ~ .checkmark {
+    border: 2px solid #FE5F5F;
+
+    background-image: url("../img/radio2.svg");
+    background-repeat: no-repeat;
+    
+    background-position: center left 18px;
+}
+
+.contactContainer .contactForm .radio input:hover ~ .checkmark {
+    border: 2px solid #FE5F5F;
+    
+    background-image: url("../img/radio2.svg");
+    background-repeat: no-repeat;
+    
+    background-position: center left 18px;
+}
+/*-------------------------------step4 input------------------------------------*/
+.contactContainer .contactForm .stepContent .step4 .smalltitle {
+    font-family: myFont;
+    font-style: normal;
+
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 23px;
+
+    color: #284D6D;
+
+    margin-bottom: 8px;
+}
+
+.contactContainer .contactForm .stepContent .step4 input {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    
+    color: #A1A1B2;
+    
+    padding: 17px 45px 17px 24px;
+    
+    background: #FFFFFF;
+    border: 2px solid #EFF0F7;
+    box-shadow: 0px 2px 6px rgba(19, 18, 66, 0.07);
+    border-radius: 46px;
+    
+    background-repeat: no-repeat;
+    background-position: right 24px center;
+    
+    width: 100%;
+    
+    outline: none;
+}
+
+.contactContainer .contactForm .stepContent .step4 input:focus {
+    border: 2px solid #FE5F5F;
+    background-image: white;
+}
+
+.contactContainer .contactForm .stepContent .step4 input:hover {
+    border: 2px solid #FE5F5F;
+    background-image: white;
+}
+
+
+.contactContainer .contactForm .stepContent .step4 .nameInput input {
+    background-image: url("../img/name\ Icon.svg");
+}
+
+.contactContainer .contactForm .stepContent .step4 .phoneInput input {
+    background-image: url("../img/phone\ Icon.svg");
+}
+
+.contactContainer .contactForm .stepContent .step4 .emailInput input {
+    background-image: url("../img/email\ icon.svg");
+}
+
+.contactContainer .contactForm .stepContent .title {
+    padding: 16px 0px;
+}
+
+.contactContainer .mark {
+    position: absolute;   
+    
+    top: -60px;
+    right: -33.5px;
+    
+    height: 120px;
+    width: 120px;
+}
+/*-------------------------------------------------------------------------*/
+.contactContainer .contactForm .step2 .col_1 {
+    position: relative;
+
+    display: flex;
+    align-items: center;
+
+    margin-bottom: 24px;
+}
+
+.contactContainer .contactForm .step2 .col_1 .radio {
+    width: 49%;
+}
+
+.contactContainer .contactForm .step2 .col_1 .radio1 {
+    position: relative;
+    left: 0;
+}
+
+.contactContainer .contactForm .step2 .col_1 .radio2 {
+    position: absolute;
+    right: 0px;
+}
+
+.contactContainer .contactForm .step2 .col_1 .radio .checkmark {
+    width: 100%;
+}
+/*--------------------------------------------------------------------*/
+.contactContainer .contactForm .step3 .col_1 {
+    display: flex;
+    align-items: center;
+    margin-bottom: 24px;
+
+    position: relative;
+}
+
+.contactContainer .contactForm .step3 .col_2 {
+    display: flex;
+    align-items: center;
+
+    position: relative;
+}
+
+.contactContainer .contactForm .step3 .radio {
+    width: 49%;
+}
+
+.contactContainer .contactForm .step3 .radio1 {
+    position: relative;
+    left: 0;
+}
+
+.contactContainer .contactForm .step3 .radio2 {
+    position: absolute;
+    right: 0px;
+}
+
+/*--------------------------------------------------------------------*/
+.contactContainer .contactForm .step4 {
+    padding: 0px 25px;
+}
+
+.contactContainer .contactForm .step4 .col_1 .nameInput, .phoneInput {
+    width: 49%;
+    margin-bottom: 16px;
+}
+
+.contactContainer .contactForm .step4 .col_1 .nameInput {
+    position: relative;
+    float: left;
+}
+
+.contactContainer .contactForm .step4 .col_1 .phoneInput {
+    position: relative;
+    float: right;
+}
+
+/*------------------------------------------------------------------------*/
+@media(max-width: 1250px) {
+    .contactContainer {
+        max-width: 718px;
+        height: auto;
+        margin: 0 auto;
+        float: none;
+    }
+}
+
+@media (max-width: 685px) {
+    .contactContainer .mark {
+        top: -65px;
+        right: 33.5px;
+    }
+}
+
+@media (max-width: 600px ) {
+    .contactContainer .contactForm {
+        padding: 32px 24px;
+    }
+    .contactContainer .contactForm .ContactTitle {
+        font-family: myFont;
+        font-style: normal;
+
+        font-weight: 700;
+        font-size: 20px;
+        line-height: 24px;
+
+        text-align: center;
+
+        color: #284D6D;
+    }
+
+    .contactContainer .mark {
+        top: -40px;
+        right: 25px;
+
+        height: 70px;
+        width: 70px;
+    }
+
+    .contactContainer .contactForm .stepContent .stepContentTitle {
+        font-family: myFont;
+        font-style: normal;
+
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 22px;
+        
+        text-align: center;
+        
+        color: #284D6D;
+    }
+
+    .contactContainer .contactForm .stepContent .step1 input {
+        padding: 16px 45px 16px 24px;
+    
+        width: 100%;
+        height: 42px;
+        
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 20px;
+
+        color: #284D6D;
+        
+        background-image: url("../img/search\ icon.svg");
+        background-repeat: no-repeat;
+        background-position: right 23.5px center;
+        background-size: 17px 17px;
+        
+        outline: none;
+    }
+
+    .contactContainer .contactForm .bottom .submitButton {
+        position: relative;
+        
+        border-radius: 100px;
+        
+        padding: 9px 24px;
+        float: none;
+        
+        display: block;
+        
+        margin: 0px auto;
+        margin-bottom: 8px;
+
+        cursor: pointer;
+    }
+
+    .contactContainer .contactForm .protectLink {
+        position: relative;    
+
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 24px;
+        
+        color: #A1A1B2;
+        
+        text-align: center;
+    }
+
+    .contactContainer .contactForm .radio .checkmark {
+        padding: 12px 24px 12px 47px;
+    
+        font-family: myFont;
+        font-style: normal;
+        
+        min-height: 49px;
+    
+        font-weight: 400;
+        font-size: 13px;
+        line-height: 23px;
+    }
+
+    .contactContainer .contactForm .step2 .col_1 {
+        display: block;
+        margin-bottom: 0px;
+    }
+
+    .contactContainer .contactForm .step2 .col_1 .radio {
+        width: 100%;
+    }
+
+    .contactContainer .contactForm .step2 .col_1 .radio2 {
+        position: relative;
+        right: 0px;
+    }
+
+    .contactContainer .contactForm .step2 .col_1 .radio .checkmark {
+        margin-bottom: 12px;
+    }
+
+    .contactContainer .contactForm .step4 {
+        padding: 0px;
+    }
+    
+    .contactContainer .contactForm .stepContent .step4 .smalltitle {
+        font-family: myFont;
+        font-style: normal;
+    
+        font-weight: 500;
+        font-size: 13px;
+        line-height: 23px;
+        
+        margin-bottom: 4px;
+    }
+    
+    .contactContainer .contactForm .stepContent .step4 input {
+        font-weight: 400;
+        font-size: 15px;
+        line-height: 24px;
+
+        width: 100%;
+        height: 49px;
+        
+        color: #A1A1B2;
+
+        padding: 16px 45px 16px 24px;
+        background: #FFFFFF;
+        border: 2px solid #EFF0F7;
+        box-shadow: 0px 2px 6px rgba(19, 18, 66, 0.07);
+
+        border-radius: 46px;
+        background-repeat: no-repeat;
+        background-position: right 24px center;
+        
+        outline: none;
+    }
+
+    .contactContainer .contactForm .step4 .col_1 .nameInput, .phoneInput {
+        width: 100%;
+        margin-bottom: 8px;
+    }
+}

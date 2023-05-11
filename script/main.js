@@ -1,81 +1,99 @@
 var step = 1;
-var stepImageWidth = 24;
-var intervalId = setInterval(function() {
-    var container = document.querySelector('.container');
-    var cards = document.getElementById("cards");
-    var card = document.querySelector(".card");
-    var contactForm = document.querySelector(".contactContainer");
-    var stepImage1 = document.getElementById("stepImage1");
-    var stepImage2 = document.getElementById("stepImage2");
-    var steps = document.querySelector(".steps");
+var previousStep = 1;
 
-    var card1 = document.getElementById("card1");
-    var card2 = document.getElementById("card2");
-    var card3 = document.getElementById("card3");
-    var card4 = document.getElementById("card4");
-
-    var pageNav = document.getElementById("pageNav");
-
-    var contactFormWidth = contactForm.offsetWidth - 80;
-    stepImage1.style.backgroundSize = contactFormWidth + "px";
-    stepImage2.style.backgroundSize = contactFormWidth + "px";
-
-    var stepsHeight = contactFormWidth/368;
-    stepsHeight *= 70;
-    steps.style.height = stepsHeight + "px";
-
-    var containerwidth = container.offsetWidth - 130;
-    var cardWidth = card.offsetWidth + 20;
-    var cardNum = parseInt(containerwidth/cardWidth);
-    var width = cardNum * cardWidth;
-    
-    if(cardNum <= 1) {
-        card2.style.display = "none";
-        card3.style.display = "none";
-        card4.style.display = "none";
-
-        pageNav.style.display = "block";
+var percent = 0;
+var percent2 = 100;
+i = 1;
+j = 1;
+var flag = 0;
+var temp = 0;
+var flag1 = 0;
+var changePageNav = setInterval(function() {
+    var elements = document.getElementsByClassName("pageNavRadio");
+    var body = document.body;
+    for(var i = 0; i< elements.length ; i++) {
+        elements[i].disabled = true;
+    }
+    if(body.offsetWidth < 975) {
+        flag1++;
+        if(flag1 == 970) {
+            elements[temp++].checked = false;
+            if(temp>3)
+                temp = 0;
+            elements[temp].checked = true;        
+            flag1 = 0;    
+        }
     } else {
-        card2.style.display = "inline-block";
-        card3.style.display = "inline-block";
-        card4.style.display = "inline-block";
+        flag1 = 0;
+    }
+}, 1);
 
-        pageNav.style.display = "none";
-    }
-    if(cardNum >= 1) {
-        cards.style.maxWidth = width + "px";
-    }
-  }, 50);
+var moveStepImage = setInterval(function() {
+    var elements  = document.getElementsByClassName("stepMovie");
+    var stepValues  = document.getElementsByClassName("stepValue");
+    if(i < j) {
 
-  var moveStepImage = setInterval(function() {
-    var stepImage = document.getElementById("stepImage2");
-    if(step == 1) {
-        if(stepImageWidth > 24) {
-            stepImageWidth--;
-        } else if(stepImageWidth < 24) {
-            stepImageWidth++;
+        if( i % 2 == 0) {
+            elements[i].style.backgroundSize = percent + "% 100%";
+                stepValues[i/2].style.color = "white";
+        } else {
+            elements[i].style.width = percent + "%";
         }
-    } else if(step == 2) {
-        if(stepImageWidth > 47) {
-            stepImageWidth--;
-        } else if(stepImageWidth < 47) {
-            stepImageWidth++;
+
+        percent += 10;
+
+        if(percent > 100) {
+            percent = 0;
+            i++;
         }
-    } else if(step == 3) {
-        if(stepImageWidth > 75) {
-            stepImageWidth--;
-        } else if(stepImageWidth < 75) {
-            stepImageWidth++;
+        flag = 1;
+    }
+    if(i == j && flag == 1) {
+        if(i%2 == 1) {
+            elements[i].style.width = percent + "%";
+            if(percent > 50) {
+                percent = 0;
+                flag = 0;
+            }
         }
-    } else if(step == 4) {
-        if(stepImageWidth > 100) {
-            stepImageWidth--;
-        } else if(stepImageWidth < 100) {
-            stepImageWidth++;
+        else { 
+            elements[i].style.backgroundSize = percent + "% 100%";
+            if(percent > 100) {
+                percent = 0;
+                flag = 0;
+            }
+            stepValues[i/2].style.color = "white";
+        }
+        percent += 10;
+    }
+    if(i > j) {
+
+        if( i % 2 == 0) {
+            elements[i].style.backgroundSize = percent2 + "% 100%";
+            if(percent2 < 60) {
+                stepValues[i/2].style.color = "#3F4045";
+            }
+        } else {
+            elements[i].style.width = percent2 + "%";
+        }
+
+        percent2 -= 10;
+
+        if(percent2 <0) {
+            percent2 = 100;
+            i--;
+        }
+        flag = 2;
+    }
+    if(i == j && flag == 2) {
+        elements[i].style.width = percent2 + "%";
+        percent2 -= 10;
+        if(percent2 < 50) {
+            percent2 = 100;
+            flag = 0;
         }
     }
-    stepImage.style.width = stepImageWidth + "%";
-  }, 7);
+}, 7);
 
   function setStep(previousStep, nextStep) {
     var step1 = document.getElementById("step1");
@@ -101,13 +119,29 @@ var intervalId = setInterval(function() {
 
 function nextStep() {
     if(step != 4) {
+        i = step*2-1;
+        j = i+2;
+        if(j > 6) {
+            j = 6;
+        }
+        if(i > 6) {
+            i = 6;
+        }
         setStep(step++, step);
     }
 }
 
-function movePreviousStep (previousStep) {
-    if(previousStep < step) {
-        setStep(step, previousStep);
-        step = previousStep;
+function movePreviousStep (previous) {
+    if(previous < step) {
+        i = step*2-1;
+        j = previous*2-1;
+        if(j > 6) {
+            j = 6;
+        }
+        if(i > 6) {
+            i = 6;
+        }
+        setStep(step, previous);
+        step = previous;
     }
 }

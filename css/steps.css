@@ -1,0 +1,197 @@
+@font-face {
+    font-family: myFont;
+    src: url("../Font/Roboto-Regular.ttf");
+}
+
+.stepButtons { 
+	position:relative;
+    
+    overflow:hidden;
+
+    width: 100%;
+	height:93px;
+	
+    padding: 0px;
+    padding-top: 16px;
+}
+
+.stepButton1, .stepButton2, .stepButton3 { 
+	position:relative;
+    
+    width:26%;
+	height:77px;
+	
+    display: inline-block;
+}
+
+.stepButton4 {
+    position:relative;
+
+    width:15%;
+	height:77px;
+
+    display: inline-block;
+}
+
+.stepButtonContent { 
+	position:relative;
+
+    left:0px;
+	top:0px;
+
+    width:100%;
+	height:100%;
+}
+
+.stepButtonMain { 
+	position:absolute;
+
+    left:0px;
+	top:0px;
+
+    width:89px;
+	height:77px;
+}
+
+.stepButtonTitle { 
+	position:absolute;
+
+    color:rgba(86.40004500746727, 94.3754294514656, 106.33851751685143, 1);
+
+    left:0px;
+	top:0px;
+
+	width:100%;
+	height:10px;
+
+	font-family:myFont;
+	text-align:center;
+
+	font-size:14px;
+	letter-spacing:0;
+	line-height: 18px;
+}
+
+.stepButtonMainContent { 
+	position:absolute;
+
+    cursor: pointer;
+
+    left:28.5px;
+	top:25px;
+
+    width:32px;
+	height:32px;
+}
+
+.stepButtonCircle { 
+	position:absolute;
+
+    left:0px;
+	top:0px;
+
+	background-image: url("../img/background.png");
+    background-repeat: no-repeat;
+    background-size: 0% 100%;
+    background-color: #EFF0F7;
+
+    border-radius:500px;
+	width:32px;
+	height:32px;
+}
+
+.stepValue { 
+	position:relative;
+
+    left:11px;
+	top:3px;
+
+    width:11px;
+	height:26px;
+	
+    color:#3F4045;
+	
+    font-family:myFont;
+	text-align:center;
+
+	font-size:18px;
+	letter-spacing:0;
+	line-height: 26px;
+}
+
+.nextline { 
+	position:relative;
+
+    left:89px;
+	top:37px;
+
+    width: 40%;
+	height:3px;
+}
+
+.whiteline { 
+	position:absolute;
+
+    left:0px;
+	top:0px;
+
+    background-color:rgba(239.3104138970375, 240.15623331069946, 246.49999290704727, 1);
+
+    width: 100%;
+	height:3px;
+
+    border-top-left-radius:100px;
+	border-top-right-radius:100px;
+	border-bottom-left-radius:100px;
+	border-bottom-right-radius:100px;
+}
+
+.redline { 
+	position:absolute;
+
+    left:0.04260493442416191px;
+	top:5.6843418860808015e-14px;
+
+    width:0%;
+	height:3px;
+
+    background-color:rgba(254.0260210633278, 95.25976359844208, 95.25976359844208, 1);
+
+    border-top-left-radius:100px;
+	border-top-right-radius:100px;
+	border-bottom-left-radius:100px;
+	border-bottom-right-radius:100px;
+}
+
+.stepButton1 .stepButtonCircle { 
+    background-size: 100% 100%;
+}
+
+.stepButton1 .nextline .redline { 
+    width: 50%;
+}
+
+.stepButton1 .stepValue{ 
+    color: white;
+}
+/*---------------------------------------------------------------------------------------------------------*/
+@media (max-width: 600px ) {
+    .nextline {
+        display: none;
+    }
+
+    .stepButton1, .stepButton2, .stepButton3, .stepButton4 { 
+        width:23%;
+    }
+
+    .stepButtonTitle {
+        font-family: myFont;
+        font-style: normal;
+
+        font-weight: 400;
+        font-size: 11px;
+        line-height: 18px;
+
+        color: #565E6A;
+    }
+}
