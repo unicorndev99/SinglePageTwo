@@ -5,19 +5,14 @@
 }
 
 body {
-    background-color: gray;
+    background-color: rgb(247, 246, 251);
     height: 100%;
-}
-
-@font-face {
-    font-family: myFont;
-    src: url("../Font/Roboto-Regular.ttf");
 }
 
 .container {
     position: relative;
     
-    background-color: rgb(247, 246, 251);
+    
 
     margin: 0 auto;
 
@@ -28,21 +23,48 @@ body {
     flex-direction: column;
 }
 /*---------------------------------------------------------------*/
-
-.headerImage {
+.header {
     position: absolute;
-    
+    width: 100%;
+    height: 400px;
+    display: flex;
+    align-items: center;
+}
+
+.header .headerImage {
+    position: relative;
     background-image: url("../img/Header Desktop.svg");
     background-position: right;
     background-repeat: no-repeat;
     
-    width: 100%;
-    height: 400px;
+    width: 1440px;
+    height: 100%;
+}
+
+.imageLeft {
+    background-image: url("../img/imageLeft.jpg");
+    background-position: right;
+    background-size: 100% 100%;
+    width: 0px;
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
+    border: none;
+    
+}
+
+.imageRight {
+    background-image: url("../img/imageRight.jpg");
+    background-position: left;
+    background-size: 100% 100%;
+    width: 0px;
+    height: 100%;
 }
 /*---------------------------------------------------------------*/
 .firstSection, .thirdSection, .fourthSection {
     position: relative;
     width: 100%;
+    min-width: 331px;
 }
 /*---------------------------------------------------------------*/
 .firstSection .logo {
@@ -68,11 +90,11 @@ body {
 
 /*-------------------------------------------*/
 .firstSection .firstSectionContent {
-    padding: 0px 65px 65px 65px;
+    padding: 0px 65px 112px 65px;
 }
 
 .firstSection .descriptionTitle {
-    font-family: myFont;
+    font-family: "roboto";
     font-style: normal;
 
     font-weight: 700;
@@ -85,7 +107,7 @@ body {
 }
 
 .firstSection .descriptionText {
-    font-family: myFont;
+    font-family: "roboto";
     font-style: normal;
     
     font-weight: 400;
@@ -133,7 +155,7 @@ body {
 
     padding: 4px 33px ;
     
-    font-family: myFont;
+    font-family: "roboto";
     font-style: normal;
 
     font-weight: 500;
@@ -150,15 +172,15 @@ body {
 }
 
 .secondSection .secondSectionContent {
-    max-width: 1000px;
-    margin: 0 auto;
+    max-width: 1440px;
 }
 
 .secondSection .secondSectionContent .column_1 {
     float: left;
+    padding-left: 113px;
+    padding-right: 50px;
 }
 .secondSection .secondSectionContent .column_2 {
-    margin-left: 30px;
     float: left;
 }
 
@@ -167,7 +189,7 @@ body {
 }
 
 .secondSection .column_1 .content .contentTitle {
-    font-family: myFont;
+    font-family: "roboto";
     font-style: normal;
 
     font-weight: 700;
@@ -179,7 +201,7 @@ body {
 } 
 
 .secondSection .column_1 .content .contentText {
-    font-family: myFont;
+    font-family: "roboto";
     font-style: normal;
 
     font-weight: 400;
@@ -192,7 +214,7 @@ body {
     min-height: 100px;
 }
 .secondSection .column_2 .content .diagramTitle {
-    font-family: myFont;
+    font-family: "roboto";
     font-style: normal;
 
     font-weight: 500;
@@ -205,7 +227,7 @@ body {
 }
 
 .secondSection .column_2 .content .diagramText {
-    font-family: myFont;
+    font-family: "roboto";
     font-style: normal;
 
     font-weight: 400;
@@ -223,7 +245,7 @@ body {
 .secondSection .column_2 .content .diagramContent .col_1 {
     max-width: 50px;
     height: 100%;
-    
+    margin-right: 30px;
     float: left;
 }
 
@@ -237,7 +259,7 @@ body {
 }
 
 .secondSection .column_2 .content .diagramContent .col_2 .diagramTitle {
-    font-family: myFont;
+    font-family: "roboto";
     font-style: normal;
 
     font-weight: 500;
@@ -248,7 +270,7 @@ body {
 }
 
 .secondSection .column_2 .content .diagramContent .col_2 .diagramText {
-    font-family: myFont;
+    font-family: "roboto";
     font-style: normal;
 
     font-weight: 400;
@@ -266,7 +288,7 @@ body {
 }
 
 .fourthSection .title {
-    font-family: myFont;
+    font-family: "roboto";
     font-style: normal;
 
     font-weight: 700;
@@ -300,7 +322,7 @@ body {
 }
 
 .thirdSection .title .bigTitle{
-    font-family: myFont;
+    font-family: "roboto";
     font-style: normal;
 
     font-weight: 700;
@@ -314,7 +336,7 @@ body {
 }
 
 .thirdSection .title .smallTitle{
-    font-family: myFont;
+    font-family: "roboto";
     font-style: normal;
     
     font-weight: 400;
@@ -356,6 +378,7 @@ body {
 .thirdSection .cards .card .content {
     display: flex;
     flex-direction: column;
+
 }
 
 .thirdSection .cards .card .content img {
@@ -365,7 +388,7 @@ body {
 }
 
 .thirdSection .cards .card .cardText {
-    font-family: myFont;
+    font-family: "roboto";
     font-style: normal;
     
     font-weight: 400;
@@ -382,7 +405,7 @@ body {
 }
 
 .thirdSection .info  .cardName {
-    font-family: myFont;
+    font-family: "roboto";
     font-style: normal;
 
     font-weight: 600;
@@ -393,7 +416,7 @@ body {
 }
 
 .thirdSection .info  .cardPosition {
-    font-family: myFont;
+    font-family: "roboto";
     font-style: normal;
     
     font-weight: 400;
@@ -467,7 +490,7 @@ footer .footerText {
 }
 
 footer .footerText {
-    font-family: myFont;
+    font-family: "roboto";
     font-style: normal;
 
     font-weight: 400;
@@ -479,14 +502,26 @@ footer .footerText {
     color: #EFF0F7;
 }
 /*--------------responsive--------------*/
-@media(max-width: 1250px) {
+@media(max-width: 1300px) {
     .container {
         max-width: 991px;
     }
     /*-----------------------------------------------------------*/
-    .headerImage {
+    .header {
+        position: absolute;
+    }
+    .header .headerImage {
         background-image: url("../img/Header\ Desktop2.svg");
         background-position: center;
+        width: 991px;
+        height: 100%;
+    }
+    .imageLeft {
+        background-image: url("../img/imageLeft1.jpg");
+    }
+    
+    .imageRight {
+        background-image: url("../img/imageRight1.jpg");
     }
 
     .firstSection {
@@ -494,6 +529,9 @@ footer .footerText {
         padding-bottom: 0px;
     }
 
+    .firstSection .firstSectionContent {
+        padding-bottom: 65px;
+    }
     .firstSection .firstSectionContent .column_1 .space1 {
         display: block;
         height: 130px;
@@ -526,6 +564,11 @@ footer .footerText {
     .secondSection {
         padding: 65px;
     }
+
+    .secondSection .secondSectionContent .column_1 {
+        padding: 0px;
+    }
+
     .secondSection .secondSectionContent {
         max-width: 712px;
         margin: 0 auto;
@@ -589,11 +632,24 @@ footer .footerText {
         min-width: 331px;
     }
 
-    .headerImage {
-        background-image: url("../img/Header\ Mobile.svg");
+    .header {
+        position: absolute;
         height: 181px;
+        min-width: 331px;
     }
-
+    .header .headerImage {
+        background-image: url("../img/Header\ Mobile.svg");
+        background-position: center;
+        width: 375px;
+        height: 100%;
+    }
+    .imageLeft {
+        background-image: url("../img/imageLeft1.jpg");
+    }
+    
+    .imageRight {
+        background-image: url("../img/imageRight2.jpg");
+    }
     .firstSection  {
         padding: 0px;
         padding-bottom: 20px;
@@ -604,11 +660,11 @@ footer .footerText {
         width: 210px;
         height: auto;
         left: 35px;
-        top: 5px;
+        top: 15px;
     }
 
     .firstSection .descriptionTitle {
-        font-family: myFont;
+        font-family: "roboto";
         font-style: normal;
 
         font-weight: 700;
@@ -635,7 +691,6 @@ footer .footerText {
     .secondSection .column_1 .content .contentText {
         font-size: 16px;
         line-height: 24px;
-        margin-bottom: 46px;
     }
 
     .secondSection .column_2 .content .diagramContent {
@@ -654,11 +709,11 @@ footer .footerText {
     }
 
     .secondSection .column_2 .content .diagramContent .col_1 img {
-        width: 80%
+        width: 100%;
     }
     
     .secondSection .column_2 .content .diagramContent .col_2 {
-        max-width: 85%;
+        max-width: 70%;
         height: 100%;
         
         float: left;
@@ -667,7 +722,7 @@ footer .footerText {
     }
 
     .firstSection .descriptionText {
-        font-family: myFont;
+        font-family: "roboto";
         font-style: normal;
 
         font-weight: 400;
@@ -708,7 +763,7 @@ footer .footerText {
     }
     
     .fourthSection .title {
-        font-family: myFont;
+        font-family: "roboto";
         font-style: normal;
 
         font-weight: 700;
@@ -730,6 +785,7 @@ footer .footerText {
         height: 82.7px;
     }
     
+    
     .thirdSection {
         padding: 35px 0px;
     }
@@ -740,7 +796,7 @@ footer .footerText {
     }
     
     .thirdSection .title .bigTitle{
-        font-family: myFont;
+        font-family: "roboto";
         font-style: normal;
 
         font-weight: 700;
@@ -753,7 +809,7 @@ footer .footerText {
     }
     
     .thirdSection .title .smallTitle{
-        font-family: myFont;
+        font-family: "roboto";
         font-style: normal;
 
         font-weight: 400;
@@ -761,10 +817,13 @@ footer .footerText {
         line-height: 23px;
 
         color: #284D6D;
+
+        margin-bottom: 20px;
     }
 
     footer {
         padding: 20px 16px;
+        min-width: 331px;
     }
     
     footer table {
@@ -781,7 +840,7 @@ footer .footerText {
     }
     
     footer .footerText {
-        font-family: myFont;
+        font-family: "roboto";
         font-style: normal;
 
         font-weight: 400;
@@ -817,8 +876,8 @@ footer .footerText {
 
 @media (max-width: 975px) {
     .thirdSection .cards {
-        max-width: 450px;
-        height: 410px;
+        width: 480px;
+        height: 460px;
         background-color: rgb(247, 246, 251);
         position: relative;
         overflow: hidden;
@@ -837,12 +896,13 @@ footer .footerText {
     
     .thirdSection .pageNav {
         display: block;
+        top: 410px;
     }
 }
 @media (max-width: 600px) {
     .thirdSection .cards {
-        max-width: 316px;
-        height: 410px;
+        width: 330px;
+        height: 470px;
         background-color: rgb(247, 246, 251);
         position: relative;
         overflow: hidden;
@@ -861,6 +921,7 @@ footer .footerText {
 
     .thirdSection .pageNav {
         display: block;
+        top: 410px;
     }
 }
 

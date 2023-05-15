@@ -28,6 +28,29 @@ var changePageNav = setInterval(function() {
     }
 }, 1);
 
+var changeHeader = setInterval(function() {
+    var bodyWidth = document.body.clientWidth;
+    var container = document.getElementsByClassName("container");
+    var containerWdith = container[0].offsetWidth;
+
+    var width = (bodyWidth - containerWdith)/2;
+    var imageRight = document.getElementsByClassName("imageRight");
+    var imageLeft = document.getElementsByClassName("imageLeft");
+
+    if(bodyWidth > 331) {
+        imageRight[0].style.width = width + 'px';
+        imageLeft[0].style.width = width + 'px';
+    
+        if(bodyWidth == containerWdith) {
+            imageLeft[0].style.height = "0";
+            imageRight[0].style.height = "0";
+        } else{
+            imageLeft[0].style.height = "100%";
+            imageRight[0].style.height = "100%";
+        }
+    }
+}, 1);
+
 var moveStepImage = setInterval(function() {
     var elements  = document.getElementsByClassName("stepMovie");
     var stepValues  = document.getElementsByClassName("stepValue");

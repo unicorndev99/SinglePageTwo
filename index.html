@@ -7,14 +7,22 @@
         <link rel="stylesheet" href="css/main.css">
         <link rel="stylesheet" href="css/steps.css">
         <link rel="stylesheet" href="css/contactForm.css">
+        
         <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet"> 
+        
         <script src="script/scrollImage.js"></script>
         <script src="script/main.js"></script>
     </head>
     <body>
-        <div class="container" id="container">
+        <div class="header">
+            <div class="imageLeft"></div>
             <div class="headerImage"></div>
-            <section class="firstSection">
+            <div class="imageRight"></div>
+        </div>
+            <section class="firstSection container">
                 <div class="logo">
                     <img class="logo_Image" src="img/Logo Sponsor.svg">
                 </div>
@@ -168,7 +176,8 @@
                                 </div> 
                                 <div class="bottom">
                                     <button class="submitButton" onclick="nextStep()">Etape suivante</button>
-                                    <a class="protectLink"><p><img src="img/key.svg">   Protection des données & Ment0ions légales</p></a>
+                                    <a href="https://bloctel.gouv.fr" class="protectLink"><p><img src="img/key.svg">   En démarrant cette recherche, vous acceptez notre politique de Protection des Données Personnelles disponible en cliquant ici.
+Nous vous informons de l'existence de la liste d'opposition au démarchage téléphonique. Inscription sur <span class="address">bloctel.gouv.fr</span></p></a>
                                 </div>   
                             </div>
                             <img class="mark" src="img/mark.svg">    
@@ -190,7 +199,7 @@
                     </div>
                 </div>
             </section>
-            <section class="secondSection">
+            <section class="secondSection container">
                 <div class="secondSectionContent">
                     <div class="column_1">
                         <div class="content">
@@ -241,7 +250,7 @@
                     </div>
                 </div>
             </section>    
-            <section class="thirdSection">
+            <section class="thirdSection container">
                 <div class="title">
                     <h2 class="bigTitle">Ce que les familles disent de nous</h2>
                     <p class="smallTitle">Retraite Plus est noté <b>4.7/5</b> sur la base de <b>3 626 avis</b> sur <img src="img/Single Star.svg"></p>
@@ -287,38 +296,38 @@
                             </div>    
                         </div>
                     </div>
-                </div>
-                <div class="pageNav" id="pageNav">
-                    <label class="pageRadio">
-                        <input class="pageNavRadio" type="radio" checked="checked" name="radio2">
-                        <span class="checkmark" id="checkmark1"></span>
-                    </label>
-                    <label class="pageRadio">
-                        <input class="pageNavRadio" type="radio" name="radio2">
-                        <span class="checkmark" id="checkmark1"></span>
-                    </label>
-                    <label class="pageRadio">
-                        <input class="pageNavRadio" type="radio" name="radio2">
-                        <span class="checkmark" id="checkmark1"></span>
-                    </label>
-                    <label class="pageRadio">
-                        <input class="pageNavRadio" type="radio" name="radio2">
-                        <span class="checkmark" id="checkmark1"></span>
-                    </label>
+                    <div class="pageNav" id="pageNav">
+                        <label class="pageRadio">
+                            <input class="pageNavRadio" type="radio" checked="checked" name="radio2">
+                            <span class="checkmark" id="checkmark1"></span>
+                        </label>
+                        <label class="pageRadio">
+                            <input class="pageNavRadio" type="radio" name="radio2">
+                            <span class="checkmark" id="checkmark1"></span>
+                        </label>
+                        <label class="pageRadio">
+                            <input class="pageNavRadio" type="radio" name="radio2">
+                            <span class="checkmark" id="checkmark1"></span>
+                        </label>
+                        <label class="pageRadio">
+                            <input class="pageNavRadio" type="radio" name="radio2">
+                            <span class="checkmark" id="checkmark1"></span>
+                        </label>
+                    </div>
+    
                 </div>
             </section>
-            <section class="fourthSection">
-                <h2 class="title">Ils nous font confiance</h2>
-                <div id="scrollImage"></div>
-            </section>
-            <footer>
-                <table>
-                    <tr>
-                        <td><img src="img/footer logo.svg"></td>
-                        <td><p class="footerText">© Tous droits réservés Retraite Plus 2023</p></td>
-                    </tr>
-                </table>
-            </footer>
-        </div>
+        <section class="fourthSection">
+            <h2 class="title">Ils nous font confiance</h2>
+            <div id="scrollImage"></div>
+        </section>
+        <footer>
+            <table>
+                <tr>
+                    <td><img src="img/footer logo.svg"></td>
+                    <td><p class="footerText">© Tous droits réservés Retraite Plus 2023</p></td>
+                </tr>
+            </table>
+        </footer>
     </body>
 </html>
