@@ -11,8 +11,6 @@ body {
 
 .container {
     position: relative;
-    
-    
 
     margin: 0 auto;
 
@@ -38,7 +36,9 @@ body {
     background-repeat: no-repeat;
     
     width: 1440px;
-    height: 100%;
+    height: 400px;
+    border: none;
+    
 }
 
 .imageLeft {
@@ -50,7 +50,8 @@ body {
     margin: 0px;
     padding: 0px;
     border: none;
-    
+    right: -1px;
+    position: relative;
 }
 
 .imageRight {
@@ -59,6 +60,8 @@ body {
     background-size: 100% 100%;
     width: 0px;
     height: 100%;
+    left: -2px;
+    position: relative;
 }
 /*---------------------------------------------------------------*/
 .firstSection, .thirdSection, .fourthSection {
@@ -168,9 +171,12 @@ body {
 .secondSection {
     background-color: white;
     box-shadow: 0px 10px 55px rgba(36, 74, 170, 0.15);
+    min-width: 331px;
+}
+.secondContent {
+    margin: 0 auto;
     padding: 112px 65px;
 }
-
 .secondSection .secondSectionContent {
     max-width: 1440px;
 }
@@ -209,7 +215,10 @@ body {
     line-height: 30px;
     
     color: #284D6D;
-} 
+}
+.secondSection .column_2 .content .diagramContent {
+    margin-bottom: 16px;
+}
 .secondSection .column_2 .content #diagramContent4 {
     min-height: 100px;
 }
@@ -224,6 +233,7 @@ body {
     color: #FE5F5F;
 
     display: inline-block;
+    margin-bottom: 16px;
 }
 
 .secondSection .column_2 .content .diagramText {
@@ -235,6 +245,7 @@ body {
     line-height: 24px;
 
     color: #284D6D;
+    margin-bottom: 16px;
 }
 
 .secondSection .column_2 .content .diagramContent {
@@ -302,13 +313,25 @@ body {
     margin-bottom: 12px;
 }
 
-.fourthSection #scrollImage {
-    background-image: url("../img/Scroll\ Image.svg");
-    background-repeat: repeat-x;
-    background-size: auto 100%;
-
+.fourthSection .scrollImageContainer {
+    height: 83px;
     width: 100%;
-    height: 82.7px;
+    position: relative;
+    overflow: hidden;
+}
+
+.fourthSection .scrollImageContainer .scrollImages {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    right: -1000px;
+}
+
+.fourthSection .scrollImageContainer img {
+    margin: 0 50px;
+    display: none;
 }
 /*----------------------------------------------------------------*/
 .thirdSection {
@@ -346,6 +369,11 @@ body {
     text-align: center;
 
     color: #284D6D;
+}
+
+.thirdSection .title .smallTitle img{
+    position: relative;
+    top: 2px;
 }
 
 .thirdSection .cards {
@@ -515,6 +543,7 @@ footer .footerText {
         background-position: center;
         width: 991px;
         height: 100%;
+        
     }
     .imageLeft {
         background-image: url("../img/imageLeft1.jpg");
@@ -560,8 +589,7 @@ footer .footerText {
     .firstSection .contnet .column_2 .space2 {
         display: none;
     }
-
-    .secondSection {
+    .secondContent {
         padding: 65px;
     }
 
@@ -674,7 +702,7 @@ footer .footerText {
         color: #284D6D;
     }
 
-    .secondSection {
+    .secondSection .secondContent {
         padding: 65px 35px;
     }
 
@@ -821,6 +849,11 @@ footer .footerText {
         margin-bottom: 20px;
     }
 
+    .thirdSection .title .smallTitle img {
+        width: 80px;
+        top: 3px;
+    }
+
     footer {
         padding: 20px 16px;
         min-width: 331px;
@@ -891,7 +924,8 @@ footer .footerText {
         left: 100%;
         margin: 0px;
         animation: 12s autoplay2 infinite ease-in-out;
-        box-shadow: none;        
+        box-shadow: none;    
+        margin-left: 35px;    
     }
     
     .thirdSection .pageNav {
@@ -909,8 +943,8 @@ footer .footerText {
     }
 
     .thirdSection .cards .card {
-        width: 280px;
-        height: 388px;
+        width: 316px;
+        height: 368px;
         position: absolute; 
         top: 0;
         left: 100%;
@@ -927,8 +961,8 @@ footer .footerText {
 
 @keyframes autoplay2 {
     0% {left: 100%}
-    4% {left: 25px; box-shadow: 0px 10px 22px rgba(36, 74, 170, 0.15);}
-    33.33% {left: 25px}
+    4% {left: 7px; box-shadow: 0px 10px 22px rgba(36, 74, 170, 0.15);}
+    33.33% {left: 7px}
     37.33% {left: -120%}
     100% {left: -150%}
 }

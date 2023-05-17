@@ -95,7 +95,7 @@
     position: relative;
 }
 
-.contactContainer .contactForm .protectLink p{
+.contactContainer .contactForm .protectLink{
     position: relative;
 
     bottom: 0px;
@@ -106,15 +106,20 @@
     font-style: normal;
 
     font-weight: 400;
-    font-size: 14px;
-    line-height: 24px;
+    font-size: 12px;
+    line-height: 15px;
     
     color: #A1A1B2;
-    max-width: 400px;
+    max-width: 380px;
 }
 
-.contactContainer .contactForm .protectLink:link {
-    text-decoration: none;
+.contactContainer .contactForm .protectLink img {
+    width: 8px;
+}
+
+.contactContainer .contactForm .protectLink a {
+    color: #A1A1B2;
+    text-decoration: underline;
 }
 
 .contactContainer .contactForm .stepContent .step4, .step2, .step3 {
@@ -490,8 +495,8 @@
         position: relative;    
 
         font-weight: 400;
-        font-size: 14px;
-        line-height: 24px;
+        font-size: 12px;
+        line-height: 15px;
         
         color: #A1A1B2;
         
@@ -572,24 +577,38 @@
     }
 }
 
-@media (max-width: 760px ) {
-    .contactContainer .contactForm .protectLink p{
+@media (max-width: 1250px ) {
+    .contactContainer .contactForm .protectLink{
+        max-width: 450px;
+    }
+}
+
+@media (max-width: 830px ) {
+    .contactContainer .contactForm .protectLink{
         max-width: 350px;
     }
 }
 
+@media (max-width: 725px ) {
+    .contactContainer .contactForm .protectLink{
+        max-width: 300px;
+    }
+}
+
 @media (max-width: 685px ) {
-    .contactContainer .contactForm .protectLink p{
+    .contactContainer .contactForm .protectLink{
         max-width: 400px;
     }
 }
 
 @media (max-width: 635px ) {
-    .contactContainer .contactForm .protectLink p{
+    .contactContainer .contactForm .protectLink{
         max-width: 380px;
     }
 }
 
-.address {
-    color: blue;
+@media (max-width: 605px ) {
+    .contactContainer .contactForm .protectLink{
+        max-width: 350px;
+    }
 }

@@ -33,7 +33,7 @@ var changeHeader = setInterval(function() {
     var container = document.getElementsByClassName("container");
     var containerWdith = container[0].offsetWidth;
 
-    var width = (bodyWidth - containerWdith)/2;
+    var width = (bodyWidth - containerWdith)/2 + 1;
     var imageRight = document.getElementsByClassName("imageRight");
     var imageLeft = document.getElementsByClassName("imageLeft");
 
