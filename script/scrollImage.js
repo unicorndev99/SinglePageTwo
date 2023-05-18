@@ -1,22 +1,7 @@
-var right = -2000;
+var right = 0;
 var imageTemp = 0;
 
-function getBodyWdith() {
-    setTimeout(() => {
-        right = document.body.clientWidth;
-        right *= -1;
-    }, 100);
-}
-
-getBodyWdith();
-
-var scrollImage = setInterval(function() {
-    var logos = document.getElementsByClassName("scrollImages");
-    right += 0.3;
-    logos[0].style.right = right + 'px';
-}, 1);
-
-var addImage = setInterval(function() {
+function addLogo() {
     var image1 = document.getElementById("scrollImage1");
     var image2 = document.getElementById("scrollImage2");
     var image3 = document.getElementById("scrollImage3");
@@ -52,4 +37,15 @@ var addImage = setInterval(function() {
 
     image.style.display = "block";
     logos[0].appendChild(image);
-}, 500);
+}
+
+
+var scrollImage = setInterval(function() {
+    var logos = document.getElementsByClassName("scrollImages");
+    right += 1;
+    logos[0].style.right = right + 'px';
+}, 1);
+
+var addImage = setInterval(function() {
+    addLogo();
+}, 50);

@@ -21,48 +21,19 @@ body {
     flex-direction: column;
 }
 /*---------------------------------------------------------------*/
-.header {
+.headerImage {
     position: absolute;
+    background-image: url("../img/Header Desktop.svg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+
     width: 100%;
     height: 400px;
-    display: flex;
-    align-items: center;
-}
-
-.header .headerImage {
-    position: relative;
-    background-image: url("../img/Header Desktop.svg");
-    background-position: right;
-    background-repeat: no-repeat;
-    
-    width: 1440px;
-    height: 400px;
     border: none;
     
 }
 
-.imageLeft {
-    background-image: url("../img/imageLeft.jpg");
-    background-position: right;
-    background-size: 100% 100%;
-    width: 0px;
-    height: 100%;
-    margin: 0px;
-    padding: 0px;
-    border: none;
-    right: -1px;
-    position: relative;
-}
-
-.imageRight {
-    background-image: url("../img/imageRight.jpg");
-    background-position: left;
-    background-size: 100% 100%;
-    width: 0px;
-    height: 100%;
-    left: -2px;
-    position: relative;
-}
 /*---------------------------------------------------------------*/
 .firstSection, .thirdSection, .fourthSection {
     position: relative;
@@ -380,6 +351,7 @@ body {
     position: relative;
     max-width: 1300px;
     margin: 0 auto;
+    background-color: transparent;
 }
 
 .thirdSection .cards .card {
@@ -535,23 +507,13 @@ footer .footerText {
         max-width: 991px;
     }
     /*-----------------------------------------------------------*/
-    .header {
-        position: absolute;
-    }
-    .header .headerImage {
+    .headerImage {
         background-image: url("../img/Header\ Desktop2.svg");
         background-position: center;
-        width: 991px;
-        height: 100%;
-        
+        width: 100%;
+        height: 400px;
     }
-    .imageLeft {
-        background-image: url("../img/imageLeft1.jpg");
-    }
-    
-    .imageRight {
-        background-image: url("../img/imageRight1.jpg");
-    }
+
 
     .firstSection {
         margin-bottom: 0;
@@ -660,24 +622,13 @@ footer .footerText {
         min-width: 331px;
     }
 
-    .header {
-        position: absolute;
+    .headerImage {
+        background-image: url("../img/Header\ Mobile.svg");
+        width: 100%;
         height: 181px;
         min-width: 331px;
     }
-    .header .headerImage {
-        background-image: url("../img/Header\ Mobile.svg");
-        background-position: center;
-        width: 375px;
-        height: 100%;
-    }
-    .imageLeft {
-        background-image: url("../img/imageLeft1.jpg");
-    }
-    
-    .imageRight {
-        background-image: url("../img/imageRight2.jpg");
-    }
+
     .firstSection  {
         padding: 0px;
         padding-bottom: 20px;
@@ -894,7 +845,7 @@ footer .footerText {
 @media (max-width: 1430px) {
 
     .thirdSection .cards {
-        max-width: 850px;
+        width: 850px;
         background-color: transparent;
     }
     .thirdSection .cards .card {
@@ -935,7 +886,7 @@ footer .footerText {
 }
 @media (max-width: 600px) {
     .thirdSection .cards {
-        width: 330px;
+        width: 100%;
         height: 470px;
         background-color: rgb(247, 246, 251);
         position: relative;
@@ -943,7 +894,7 @@ footer .footerText {
     }
 
     .thirdSection .cards .card {
-        width: 316px;
+        width: 87%;
         height: 368px;
         position: absolute; 
         top: 0;
@@ -961,8 +912,8 @@ footer .footerText {
 
 @keyframes autoplay2 {
     0% {left: 100%}
-    4% {left: 7px; box-shadow: 0px 10px 22px rgba(36, 74, 170, 0.15);}
-    33.33% {left: 7px}
+    4% {left: 5%; box-shadow: 0px 10px 22px rgba(36, 74, 170, 0.15);}
+    33.33% {left: 5%}
     37.33% {left: -120%}
     100% {left: -150%}
 }
